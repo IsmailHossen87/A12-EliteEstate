@@ -3,6 +3,7 @@
 
 /local/.env.local
 /server/.env 
+/server/assignment12-568f7-firebase-adminsdk-r7g25-e1ce5c3bfb.json
 
 /local/node_modules
 /server/node_modules    

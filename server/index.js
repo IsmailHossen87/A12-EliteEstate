@@ -6,12 +6,13 @@ const cookieParser = require("cookie-parser");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const cors = require("cors");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
-const firebaseAdminAccount = require("./assignment12-568f7-firebase-adminsdk-r7g25-e1ce5c3bfb.json");
+const firebaseAdminAccount = require("./assignment12-568f7-firebase-adminsdk-r7g25-ee7f6f5c7f.json");
 // delete user form firebase
 admin.initializeApp({
   credential: admin.credential.cert(firebaseAdminAccount),
   databaseURL: process.env.REAL_TIME,
 });
+
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -42,12 +43,6 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // Send a ping to confirm a successful connection
-    // await client.db("admin").command({ ping: 1 });
-    // console.log(
-    //   "Pinged your deployment. You successfully connected to MongoDB!"
-    // );
-
     const userCollecton = client.db("EliteEstate").collection("user");
     const sellerCollection = client.db("EliteEstate").collection("items");
     const wishListCollection = client.db("EliteEstate").collection("wishList");
@@ -103,8 +98,8 @@ async function run() {
       res.send(result);
     });
     app.get('/usersData',async(req,res)=>{
-      const data = req.body 
-      const result = await userCollecton.find(data).toArray()
+      // const data = req.body 
+      const result = await userCollecton.find().toArray()
       res.send(result)
     })
 
@@ -186,13 +181,46 @@ async function run() {
         if (user.firebaseUid) {
           await admin.auth().deleteUser(user.firebaseUid);
         }
-
         const result = await userCollecton.deleteOne(filter);
         res.send(result);
       }
     );
 
- 
+    // app.post("/usersDelete/:email", async (req, res) => {
+    //   const { email } = req.params; // `req.body` না, `req.params` থেকে নিতে হবে
+    //   console.log(email);
+      
+    //   if (!email) {
+    //     return res.status(400).json({ error: "Email is required" });
+    //   }      
+    //   try {
+    //     const userRecord = await admin.auth().getUserByEmail(email);
+    //     const uid = userRecord.uid;
+    
+    //     const deleteUser = await userCollecton.deleteOne({ email: email });
+    
+    //     await admin.auth().deleteUser(uid);
+    
+    //     const userRef = admin.firestore().collection("users").doc(uid);
+    //     await userRef.delete();
+    
+    //     if (deleteUser && deleteUser.deletedCount > 0) {
+    //       return res.status(200).json({
+    //         message: `User with email ${email} deleted successfully from both Firebase and database.`
+    //       });
+    //     } else {
+    //       return res.status(404).json({
+    //         error: `User with email ${email} not found in the database.`
+    //       });
+    //     }
+    //   } catch (error) {
+    //     console.error("Error deleting user:", error);
+    //     res.status(500).json({ error: "Failed to delete user." });
+    //   }
+    // });
+    // ;
+
+
     app.patch("/user/role", verifyToken, async (req, res) => {
       const { id, role } = req.body;
     

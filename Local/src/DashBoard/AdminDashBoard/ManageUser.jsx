@@ -1,13 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 import { MdAdminPanelSettings, MdDelete } from "react-icons/md";
 import { FaMagento } from "react-icons/fa";
 import Swal from "sweetalert2";
-import ReusableTitle from "../../Components/ReusableTitle";
+import UseAxiosSecure from "../../Hooks/useAxiosSecure";
+import useAuth from "../../Hooks/useAuth";
 
 const ManageUser = () => {
   const axiosSecure = UseAxiosSecure();
+  const {user} = useAuth()
+
 
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
@@ -29,19 +31,35 @@ const ManageUser = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axiosSecure.delete(`/usersDelete/${id}`).then((res) => {
-          if (res.data.deletedCount) {
+        axiosSecure.delete(`/usersDelete/${id}`)
+          .then((res) => {
+            if (res.data && res.data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "User has been deleted successfully.",
+                icon: "success",
+              });
+              refetch();
+            } else {
+              Swal.fire({
+                title: "Error!",
+                text: "Failed to delete user.",
+                icon: "error",
+              });
+            }
+          })
+          .catch((error) => {
+            console.error("Delete error:", error);
             Swal.fire({
-              title: "Deleted!",
-              text: "Your file has been deleted.",
-              icon: "success",
+              title: "Error!",
+              text: "Something went wrong. Please try again.",
+              icon: "error",
             });
-            refetch();
-          }
-        });
+          });
       }
     });
   };
+  
 
   // admin and agent
   const handleRoleChange = (id, role) => {

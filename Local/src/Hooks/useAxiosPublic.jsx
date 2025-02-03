@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const axiosPublic = axios.create({
-  baseURL: "https://server-cyan-one.vercel.app",
-  // baseURL: "https://server-cyan-one.vercel.app",
+  baseURL: "http://localhost:5000",
+  // baseURL: "https://eliteestate-rho.vercel.app",
 });
 const useAxiosPublic = () => {
   return axiosPublic;

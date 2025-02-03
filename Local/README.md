@@ -4,8 +4,8 @@
 ## Links  
 
 - **Live Site:** [Insert Live Site Link Here](https://assignment12-568f7.web.app/)  
-- **Client Repository:** [Client GitHub Repository](https://github.com/Programming-Hero-Web-Course4/b10a12-client-side-IsmailHossen87)  
-- **Server Repository:** [Server GitHub Repository](https://github.com/Programming-Hero-Web-Course4/b10a12-server-side-IsmailHossen87) 
+- **GitHub Repository:** [GitHub Repository](https://github.com/IsmailHossen87/A12-EliteEstate) 
+- **Documentation:** [Documentation](https://docs.google.com/document/d/1zEpclTfEkYY2lNYBFmty6qaVqa5TQdfDyl3NE7piJmY/edit?tab=t.0)  
 ---
 
 ## Objective  

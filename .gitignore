@@ -1,0 +1,12 @@
+/local/.gitignore
+/server/.gitignore
+
+/local/.env.local
+/server/.env 
+/server/assignment12-568f7-firebase-adminsdk-r7g25-b4357fd757.json
+
+/local/node_modules
+/server/node_modules    
+/local/.firebase
+/local/dist 
+/local/firebase.json 

@@ -18,15 +18,13 @@ const FAQS = () => {
     <div className="relative bg-cover bg-center bg-no-repeat py-4 md:py-8 lg:py-10"
       style={{ backgroundImage: "url('https://i.ibb.co/pRPy3JJ/premium-photo-1689609949921-6b2529511e38.jpg')" }}
     >
-      {/* Blur Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-60 "></div>
-
+         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       {/* FAQ Content */}
       <div className="relative w-4/5 mx-auto my-10 p-6 text-white rounded-lg shadow-lg">
         <div className="md:flex items-center md:space-x-8">
           {/* Left Section */}
           <div className="md:w-1/3">
-            <h4 className="text-xl md:text-3xl font-bold text-blue-400">Your Guide to Real Estate</h4>
+            <h4 className="text-xl md:text-3xl font-bold text-white">Your Guide to Real Estate</h4>
             <p className="mt-2">Find answers to common questions about buying, selling, and renting properties.</p>
           </div>
 

@@ -112,7 +112,7 @@ async function run() {
     app.get("/myAdded/:email?", async (req, res) => {
       try {
         const email = req.params.email;
-        const { search } = req.query;
+        const { search ,sort} = req.query;
         let filter = {};
         if (email) {
           filter.sellerEmail = email;
@@ -121,9 +121,13 @@ async function run() {
         if (search) {
           filter.location = { $regex: search, $options: "i" }; 
         }
+        let setSorting = {}
+        if (sort) {
+          setSorting = { minPrice: sort === "true" ? -1 : 1 };
+        }
         const result = await sellerCollection
           .find(filter)
-          .sort({ advertise: -1, minPrice: 1 })
+          .sort(setSorting)
           .toArray();
         res.send(result);
       } catch (error) {

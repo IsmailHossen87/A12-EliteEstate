@@ -20,7 +20,6 @@ const Enquire = () => {
 
   return (
     <>
-    <div className="absolute inset-0 bg-black bg-opacity-60 "></div>
       <div
         className="relative bg-cover bg-center bg-no-repeat  py-4 md:py-8 lg:py-10"
         style={{
@@ -28,11 +27,11 @@ const Enquire = () => {
             "url('https://i.ibb.co/pRPy3JJ/premium-photo-1689609949921-6b2529511e38.jpg')",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 sm:px-10 lg:px-20">
           {/* Left Content */}
           <div className="text-white lg:w-1/2">
-            <h1 className="text-4xl sm:text-5xl text-blue-400 font-bold mb-4">
+            <h1 className="text-4xl sm:text-5xl  font-bold mb-4">
               Discover a new way of living
             </h1>
             <p className="text-gray-300 text-lg mb-6">

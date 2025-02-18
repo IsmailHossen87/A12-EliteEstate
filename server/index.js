@@ -113,6 +113,7 @@ async function run() {
       try {
         const email = req.params.email;
         const { search ,sort} = req.query;
+        console.log(sort)
         let filter = {};
         if (email) {
           filter.sellerEmail = email;
@@ -123,7 +124,7 @@ async function run() {
         }
         let setSorting = {}
         if (sort) {
-          setSorting = { minPrice: sort === "true" ? -1 : 1 };
+          setSorting = { minPrice: sort === "true" ? 1 : -1 };
         }
         const result = await sellerCollection
           .find(filter)

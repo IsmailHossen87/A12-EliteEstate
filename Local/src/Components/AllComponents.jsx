@@ -6,7 +6,7 @@ import ReusableTitle from "./ReusableTitle";
 const AllProperties = () => {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState(false);
-  const [agentAll] = AgentsAll(search,sort);
+  const [agentAll] = AgentsAll(search, sort);
 
   const verifiedProperties = agentAll.filter(
     (verify) => verify.verification === "Verified"
@@ -34,9 +34,14 @@ const AllProperties = () => {
             </div>
           </form>
         </div>
-        <div onClick={()=> setSort(!sort)} className="flex items-center justify-center"> <button className="flex w-full mx-4 items-center justify-center bg-gray-700 p-3 rounded-lg border border-blue-500 text-white transition duration-200 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500">
-      {sort ? 'Asynchronous' : "Desencronous"}
-    </button></div>
+        <div
+          onClick={() => setSort(!sort)}
+          className="flex items-center justify-center"
+        >
+          <button className="flex w-full mx-4 items-center justify-center bg-gray-700 p-3 rounded-lg border border-blue-500 text-white transition duration-200 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500">
+            {sort ? "Ascending" : "Descending"}
+          </button>
+        </div>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-2">
         {verifiedProperties?.map((data) => (

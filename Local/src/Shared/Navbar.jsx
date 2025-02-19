@@ -20,17 +20,21 @@ function Navbar() {
     { title: "All Properties", link: "/PropertyCard" },
     { title: "Contract Us", link: "/contract" },
     { title: "About", link: "/about" },
-    
-    
-    {
-      title: "DashBoard",
-      link: role === "admin"
-        ? "/dashboard/adminProfile"
-        : role === "agent"
-        ? "/dashboard/agentProfile"
-        : "/dashboard/userProfile"
-    }
+    ...(user
+      ? [
+          {
+            title: "DashBoard",
+            link:
+              role === "admin"
+                ? "/dashboard/adminProfile"
+                : role === "agent"
+                ? "/dashboard/agentProfile"
+                : "/dashboard/userProfile",
+          },
+        ]
+      : []),
   ];
+  
 
   const handleLogOut = () => {
      logOut()

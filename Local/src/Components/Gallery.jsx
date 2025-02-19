@@ -19,10 +19,7 @@ const Gallery = () => {
 
   return (
     <div>
-       <ReusableTitle
-        title="Gallery"
-      />
-      <div className="grid grid-cols-2 md:grid-cols-3 mx-2 text-center gap-3 md:gap-5 my-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 mx-2 text-center gap-3 md:mt-5 mt-2 md:gap-5 my-10">
         {images.map((image, index) => (
           <div
             key={index}

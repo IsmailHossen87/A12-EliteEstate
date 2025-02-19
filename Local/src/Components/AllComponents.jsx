@@ -6,12 +6,12 @@ import ReusableTitle from "./ReusableTitle";
 const AllProperties = () => {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState(false);
-  const [agentAll] = AgentsAll(search, sort);
+  const [agentAll] = AgentsAll(search);
 
   const verifiedProperties = agentAll.filter(
     (verify) => verify.verification === "Verified"
   );
-
+  console.log("sort",sort)
   return (
     <div className="">
       <ReusableTitle

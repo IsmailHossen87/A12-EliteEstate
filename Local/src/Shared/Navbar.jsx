@@ -6,6 +6,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Context/AuthProvider/AuthProvier";
 import useRole from "../Hooks/useRole";
+import '../App.css'
 
 function Navbar() {
   const { user, logOut, setUser } = useContext(AuthContext);
@@ -14,6 +15,7 @@ function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
   const [role]= useRole()
+
 
   const navbar = [
     { title: "Home", link: "/" },

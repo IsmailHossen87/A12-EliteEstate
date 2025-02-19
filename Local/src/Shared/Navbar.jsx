@@ -19,6 +19,9 @@ function Navbar() {
     { title: "Home", link: "/" },
     { title: "All Properties", link: "/PropertyCard" },
     { title: "Contract Us", link: "/contract" },
+    { title: "About", link: "/about" },
+    
+    
     {
       title: "DashBoard",
       link: role === "admin"

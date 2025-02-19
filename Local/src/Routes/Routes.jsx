@@ -26,6 +26,7 @@ import Error from "../Components/Error";
 import AdvertiseSection from "../DashBoard/AdminDashBoard/AdvertiseSection";
 import Contact from "../Components/Contact";
 import ReaujableProfile from "../Components/ReaujableProfile";
+import About from "../Components/About";
 
 const Routes = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const Routes = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
       },
       {
         path: "/contract",

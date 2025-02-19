@@ -113,7 +113,6 @@ async function run() {
       try {
         const email = req.params.email;
         const { search ,sort} = req.query;
-        console.log(sort)
         let filter = {};
         if (email) {
           filter.sellerEmail = email;

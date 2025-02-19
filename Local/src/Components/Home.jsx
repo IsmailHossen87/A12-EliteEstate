@@ -7,12 +7,13 @@ import Enquire from './Enquire';
 import Expert from './Expert';
 import Gallery from './Gallery';
 import FAQS from './FAQs';
+import About from './About';
 
 
 const Home = () => {
     return (
         <div className=''>
-        <Banner></Banner>
+          <Banner></Banner>
           <AdvertiseHome></AdvertiseHome>
           <HowItsWork></HowItsWork>
           <Expert></Expert>

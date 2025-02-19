@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaCaretDown } from "react-icons/fa";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { Link, NavLink, useNavigate } from "react-router-dom";
@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../Context/AuthProvider/AuthProvier";
 import useRole from "../Hooks/useRole";
 import '../App.css'
+import { BsMoon, BsSun } from "react-icons/bs";
 
 function Navbar() {
   const { user, logOut, setUser } = useContext(AuthContext);
@@ -16,7 +17,18 @@ function Navbar() {
   const navigate = useNavigate();
   const [role]= useRole()
 
-
+  const [darkMode,setDarkMode] = useState(()=>{
+    return localStorage.getItem('theme')==='dark'
+  })
+  useEffect(()=>{
+    if(darkMode){
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme','dark')
+    }else{
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme','light')
+    }
+  })
   const navbar = [
     { title: "Home", link: "/" },
     { title: "All Properties", link: "/PropertyCard" },
@@ -108,6 +120,7 @@ function Navbar() {
               >
                 Log Out
               </button>
+              <button onClick={()=>  setDarkMode(!darkMode)} className="btn bg-blue-600  text-white">{darkMode ? <BsSun/> : <BsMoon/>  }</button>
             </div>
           ) : (
             <NavLink

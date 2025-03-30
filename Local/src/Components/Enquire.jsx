@@ -82,7 +82,7 @@ const Enquire = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-lime-700"
+                className="w-full proCardButton"
               >
                 Make an enquiry
               </button>

@@ -1,0 +1,20 @@
+.proCardButton {
+    padding: 10px 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    border: 2px solid #00A96E;
+    outline: none;
+    color: black;
+    border-radius: 10px 20px;
+    background: linear-gradient(to right, transparent 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.3s ease-in-out;
+  }
+  
+  .proCardButton:hover {
+    background-position: left bottom;
+    background-color: rgba(18, 129, 234, 0.929);
+    color: white;
+  }
+  

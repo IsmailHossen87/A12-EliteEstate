@@ -1,11 +1,11 @@
+import Lottie from "lottie-react";
 import { useEffect, useState } from 'react';
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { LoadCanvasTemplate, loadCaptchaEnginge, validateCaptcha } from 'react-simple-captcha';
 import Swal from 'sweetalert2';
 import SocialLogin from '../Context/AuthProvider/SocialLogin';
 import useAuth from '../Hooks/useAuth';
 import loginAnimation from "../assets/lotte/loginAnimation.json";
-import Lottie from "lottie-react";
 
 const Login = () => {
     const { user, signIn } = useAuth();

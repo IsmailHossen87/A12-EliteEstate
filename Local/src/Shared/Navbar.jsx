@@ -120,7 +120,7 @@ function Navbar() {
               >
                 Log Out
               </button>
-              <button onClick={()=>  setDarkMode(!darkMode)} className="btn bg-blue-600  text-white">{darkMode ? <BsSun/> : <BsMoon/>  }</button>
+              {/* <button onClick={()=>  setDarkMode(!darkMode)} className="btn bg-blue-600  text-white">{darkMode ? <BsSun/> : <BsMoon/>  }</button> */}
             </div>
           ) : (
             <NavLink

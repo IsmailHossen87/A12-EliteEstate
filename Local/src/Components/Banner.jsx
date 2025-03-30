@@ -31,6 +31,25 @@ const slidesData = [
 
 const Banner = () => {
   return (
+   <>
+   <style>
+      {`
+        @keyframes zoom-in-out {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05); 
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+        .animate-zoom-in-out {
+          animation: zoom-in-out 15s ease-in-out infinite;
+        }
+      `}
+    </style>
     <Swiper
       modules={[Autoplay, Pagination]}
       spaceBetween={30}
@@ -42,7 +61,7 @@ const Banner = () => {
       {slidesData.map((slide) => (
         <SwiperSlide key={slide.id}>
           <div
-            className="hero h-[280px] md:h-[500px] bg-cover bg-no-repeat"
+            className="hero h-[280px] md:h-[500px] animate-zoom-in-out bg-cover bg-no-repeat"
             style={{
               backgroundImage: `url(${slide.image})`,
             }}
@@ -54,20 +73,12 @@ const Banner = () => {
                   {slide.header}
                 </h1>
                 <p className="mb-5 text-white">{slide.sort}</p>
-                {/* <button className="py-3 px-6 bg-[rgb(246,140,60)] text-white font-semibold rounded-lg shadow-md hover:bg-brow transition duration-300 ease-in-out">
-                  <NavLink
-                    to="/allFoods"
-                    className="block w-full h-full text-center"
-                  >
-                    All Foods
-                  </NavLink>
-                </button> */}
               </div>
             </div>
           </div>
         </SwiperSlide>
       ))}
-    </Swiper>
+    </Swiper></>
   );
 };
 

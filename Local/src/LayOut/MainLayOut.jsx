@@ -6,11 +6,11 @@ import Footer from '../Shared/Footer';
 const MainLayOut = () => {
     return (
         <div className='container mx-auto'>
-            <Navbar></Navbar>
+            <Navbar/>
             <div className="min-h-[calc(100vh-368px)] bg-gray-900"> 
-            <Outlet>  </Outlet>
+            <Outlet/>
             </div>
-            <Footer></Footer>
+            <Footer/>
         </div>
     );
 };

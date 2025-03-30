@@ -1,6 +1,7 @@
 import { Slide } from "react-awesome-reveal";
 import {FaEnvelope,FaFacebook,FaInstagram, FaLinkedin,FaMapMarkerAlt,FaPhoneAlt,FaTwitter,FaWhatsapp,
 } from "react-icons/fa";
+import "../Components/button.css"
 import emailjs from '@emailjs/browser';
 import { useRef } from "react";
 import Swal from "sweetalert2";
@@ -89,7 +90,7 @@ const Contact = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full py-3 bg-blue-500 text-gray-800 font-bold rounded-lg hover:bg-yellow-500 transition duration-300"
+                  className="proCardButton w-full border-none font-bold"
                 >
                   Send Message
                 </button>

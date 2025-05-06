@@ -61,7 +61,7 @@ const Banner = () => {
       {slidesData.map((slide) => (
         <SwiperSlide key={slide.id}>
           <div
-            className="hero h-[280px] md:h-[500px] animate-zoom-in-out bg-cover bg-no-repeat"
+            className="hero h-[280px] md:h-[600px] animate-zoom-in-out bg-cover bg-no-repeat"
             style={{
               backgroundImage: `url(${slide.image})`,
             }}

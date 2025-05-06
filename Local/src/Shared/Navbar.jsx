@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../Context/AuthProvider/AuthProvier";
 import useRole from "../Hooks/useRole";
 import '../App.css'
+import "../index.css"
 import { BsMoon, BsSun } from "react-icons/bs";
 
 function Navbar() {
@@ -69,9 +70,9 @@ function Navbar() {
 
   return (
     <nav
-      className={`py-4 px-3 bg-lime-700 text-white sticky top-0 z-50 shadow-md`}
+      className={`py-4 px-3 bg-lightOliv text-white sticky top-0 z-50 shadow-md`}
     >
-      <div className="flex justify-between items-center container mx-auto">
+      <div className="flex justify-between items-center px-8">
         {/* Logo */}
         <div className="flex items-center text-2xl font-bold text-white">
           <span className="text-3xl">🏠</span>

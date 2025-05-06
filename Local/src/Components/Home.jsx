@@ -13,7 +13,8 @@ import About from './About';
 const Home = () => {
     return (
         <div className=''>
-          <Banner></Banner>
+          <Banner></Banner> 
+          <div className="container mx-auto">
           <AdvertiseHome></AdvertiseHome>
           <HowItsWork></HowItsWork>
           <Expert></Expert>
@@ -21,6 +22,8 @@ const Home = () => {
           <FAQS/>
           <LatestReview></LatestReview>
           <Enquire></Enquire>
+          </div>
+        
         </div>
     );
 };

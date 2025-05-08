@@ -7,8 +7,8 @@
         /* color: #ffffff; */
   }
   :root {
-    --color-lightOliv : rgb(114, 193, 3);
-    --color-DarkOlive: rgb(77, 124, 15);
+    --color-lightblue : rgb(21,44,84);
+    --color-Darkblue: rgb(19,39,79);
     --color-OliveDrab: rgb(131, 197, 190);
     --color-PrimaryBlack: rgb(0, 0, 0);
     --color-border-color: oklch(90% .076 70.697 / 0.1);

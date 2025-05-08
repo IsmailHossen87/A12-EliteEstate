@@ -6,6 +6,7 @@ import useAuth from "../Hooks/useAuth";
 import useRole from "../Hooks/useRole";
 import UseReviews from "../Hooks/Users/UseReviews";
 import UseWishList from "../Hooks/Users/UseWishList";
+import "../index.css"
 
 
 const DashBoard = () => {

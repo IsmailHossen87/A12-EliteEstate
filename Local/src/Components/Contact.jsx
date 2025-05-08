@@ -49,7 +49,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <Slide direction="left">
-            <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
+            <div className="bg-gray-800  p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-semibold text-blue-500 mb-6">
                 Get in Touch
               </h3>
@@ -60,7 +60,7 @@ const Contact = () => {
                     type="text"
                     name="user_name"
                     id="name"
-                    className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-yellow-200 focus:outline-none focus:ring focus:ring-yellow-400"
+                    className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring focus:ring-blue-800"
                     placeholder="Your Name"
                     required
                   />
@@ -70,7 +70,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-yellow-200 focus:outline-none focus:ring focus:ring-yellow-400"
+                   className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring focus:ring-blue-800"
                     placeholder="Your Email"
                     name="user_email"
                     required
@@ -82,7 +82,7 @@ const Contact = () => {
                     id="message"
                     rows="1"
                     name="message"
-                    className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-yellow-200 focus:outline-none focus:ring focus:ring-yellow-400"
+                   className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring focus:ring-blue-800"
                     placeholder="Your Message"
                     required
                   ></textarea>
@@ -100,7 +100,7 @@ const Contact = () => {
 
           {/* Contact Info */}
           <Slide direction="right">
-            <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
+            <div className="bg-gray-800 p-8 rounded-lg md:h-[390px] shadow-lg">
               <h3 className="text-2xl font-semibold text-blue-500 mb-6">
                 Contact Information
               </h3>

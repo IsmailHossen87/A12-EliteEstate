@@ -103,9 +103,9 @@ const Login = () => {
 
     return (
         <div style={{backgroundImage:`url(${registerImage})`}} className="md:py-20 py-10 flex bg-no-repeat bg-cover bg-center items-center justify-center   px-4">
-        <div className="md:flex md:justify-center shadow-lg bg-DarkOlive rounded-2xl border-white/20 md:items-center">
+        <div className="md:flex md:justify-center shadow-lg bg-Darkblue rounded-2xl border-white/20 md:items-center">
           {/* Left Side - Form Section with White Background */}
-          <div className="w-full max-w-lg bg-white px-8 py-6 rounded-2xl md:rounded-l-2xl">
+          <div className="w-full max-w-lg bg-white px-8 py-6 rounded-l-2xl md:rounded-l-2xl">
             <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">
               Sign In
             </h2>
@@ -116,7 +116,7 @@ const Login = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-400 focus:outline-none placeholder-gray-500"
+                  className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2  focus:ring-blue-800 focus:outline-none placeholder-gray-500"
                   required
                 />
               </Slide>
@@ -127,7 +127,7 @@ const Login = () => {
                     type={showPassword ? "text" : "password"}
                     name="password"
                     placeholder="Password"
-                    className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-400 focus:outline-none placeholder-gray-500"
+                    className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2  focus:ring-blue-800 focus:outline-none placeholder-gray-500"
                     required
                   />
                   <button
@@ -148,7 +148,7 @@ const Login = () => {
                     name="captcha"
                     placeholder="Type the captcha above"
                     onBlur={handleValidateCaptcha}
-                    className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-400 focus:outline-none placeholder-gray-500"
+                    className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2  focus:ring-blue-800 focus:outline-none placeholder-gray-500"
                     required
                   />
                 </div>
@@ -185,7 +185,7 @@ const Login = () => {
           </div>
       
           {/* Right Side - Info Panel with TealGreen Background */}
-          <div className="w-3/4 md:w-[450px] md:mt-10 mx-auto    md:mr-4 px-4 text-white space-y-4 text-center py-6">
+          <div className="w-3/4 md:w-[450px] md:mt-4 mx-auto    md:mr-4 px-4 text-white space-y-4 text-center py-6">
             <h3 className="md:text-3xl text-2xl font-bold">Hello, Friends</h3>
             <p className="text-white/80">
               Enter your personal details and start your journey with us

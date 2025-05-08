@@ -70,9 +70,9 @@ const Register = () => {
   return (
     <div style={{ backgroundImage: `url(${registerImage})`, }} className=" md:py-20 py-10 flex items-center justify-center px-4 
              bg-no-repeat bg-cover bg-center">
-      <div className="md:flex md:justify-center bg-DarkOlive shadow-lg rounded-2xl border-white/20 md:items-center">
+      <div className="md:flex md:justify-center bg-Darkblue shadow-lg rounded-2xl border-white/20 md:items-center">
         {/* Left Side */}
-        <div className="w-3/4 md:w-[450px] px-4 mx-auto mt-4 md:ml-4  text-white space-y-4 text-center py-6">
+        <div className="w-3/4 md:w-[450px] px-4 mx-auto md:mt-10 md:ml-4  text-white space-y-4 text-center py-6">
           <h3 className="md:text-3xl text-2xl font-bold">Welcome Back!</h3>
           <p className="text-white/80">
             To keep connected with us, please login with your personal info
@@ -101,7 +101,7 @@ const Register = () => {
                   type="text"
                   {...register("name", { required: true })}
                   placeholder="Name"
-                  className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-400 focus:outline-none placeholder-gray-500"
+                  className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-gray-500"
                 />
                 {errors.name && (
                   <span className="text-red-500">Name is required</span>
@@ -116,7 +116,7 @@ const Register = () => {
                   type="text"
                   {...register("photoURL", { required: true })}
                   placeholder="Enter your photo URL"
-                  className="input input-bordered w-full focus:outline-none focus:ring focus:ring-blue-300"
+                  className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-gray-500"
                 />
                 {errors.photoURL && <span className="text-red-600">Photo URL is required</span>}
               </div>
@@ -129,7 +129,7 @@ const Register = () => {
                   type="email"
                   {...register("email", { required: true })}
                   placeholder="Email"
-                  className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-400 focus:outline-none placeholder-gray-500"
+                  className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-gray-500"
                 />
                 {errors.email && (
                   <span className="text-red-500">Email is required</span>
@@ -148,7 +148,7 @@ const Register = () => {
                     pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
                   })}
                   placeholder="Password"
-                  className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-400 focus:outline-none placeholder-gray-500"
+                  className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-gray-500"
                 />
                 <button
                   type="button"
@@ -172,7 +172,7 @@ const Register = () => {
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="Confirm Password"
-                  className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-400 focus:outline-none placeholder-gray-500"
+                  className="w-full px-4 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-gray-500"
                 />
                 <button
                   type="button"

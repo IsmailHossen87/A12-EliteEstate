@@ -2,7 +2,7 @@
     padding: 10px 25px;
     cursor: pointer;
     margin-top: 15px;
-    border: 2px solid #00A96E;
+    border: 2px solid rgb(30, 64, 175);
     outline: none;
     color: black;
     border-radius: 10px 20px;
@@ -14,7 +14,7 @@
   
   .proCardButton:hover {
     background-position: left bottom;
-    background-color: rgba(18, 129, 234, 0.929);
+    background-color: rgb(30, 64, 175);
     color: white;
   }
   

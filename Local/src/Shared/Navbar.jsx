@@ -70,14 +70,14 @@ function Navbar() {
 
   return (
     <nav
-      className={`py-4 px-3 bg-lightOliv text-white sticky top-0 z-50 shadow-md`}
+      className={`py-4 px-3 bg-lightblue text-white sticky top-0 z-50 shadow-md`}
     >
-      <div className="flex justify-between items-center px-8">
+      <div className=" flex justify-between  items-center px-8">
         {/* Logo */}
         <div className="flex items-center text-2xl font-bold text-white">
           <span className="text-3xl">🏠</span>
           <Link to={`/`}>
-            <span className="text-3xl font-lobster ml-2">LandSphere</span>
+            <span className="text-3xl font-lobster md:ml-2">Land<span className="text-green-400">S</span>phere</span>
           </Link>
         </div>
 
@@ -90,8 +90,8 @@ function Navbar() {
               className={({ isActive }) =>
                 `py-2 px-4 rounded-full transition-all duration-300 ${
                   isActive
-                    ? "bg-blue-500 text-white shadow-lg"
-                    : " hover:bg-green-500 hover:text-white"
+                    ? "bg-blue-800 text-white shadow-lg"
+                    : " hover:bg-Darkblue hover:text-white"
                 }`
               }
             >
@@ -110,7 +110,7 @@ function Navbar() {
                   referrerPolicy="no-referrer"
                   src={user?.photoURL}
                   alt="User Profile"
-                  className="h-10 w-10 rounded-full border-2 border-green-500"
+                  className="h-10 w-10 rounded-full border-2 border-blue-600"
                 />
                 {dropdownOpen && ''}
                 <FaCaretDown className="absolute right-2 bottom-0 " />
@@ -126,11 +126,12 @@ function Navbar() {
           ) : (
             <NavLink
               to="/login"
-              className={`py-2 px-4 rounded-full transition-all duration-300 ${
-                activeButton === "/login"
-                  ? "bg-blue-500 text-white shadow-lg"
-                  : "hover:bg-green-500 hover:text-white"
-              }`}
+              className={({ isActive }) =>
+                `py-2 px-4 rounded-full transition-all duration-300 ${
+                  isActive
+                    ? "bg-blue-800 text-white shadow-lg"
+                    : " hover:bg-Darkblue hover:text-white"
+                }`}
               onClick={() => setActiveButton("/login")}
             >
               Login
@@ -151,7 +152,7 @@ function Navbar() {
       <AnimatePresence>
         {toggle && (
           <motion.div
-            className="fixed top-0 left-0 h-full w-4/5 bg-gray-900 text-white z-50 shadow-lg"
+            className="fixed top-0 left-0 h-full w-4/5 bg-Darkblue  text-white z-50 shadow-lg"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
@@ -164,8 +165,8 @@ function Navbar() {
                   className={({ isActive }) =>
                     `py-2 px-4 rounded-full transition-all duration-300 ${
                       isActive
-                        ? "bg-blue-500 text-white shadow-lg"
-                        : "hover:bg-green-500  hover:text-white"
+                        ? "bg-blue-800 text-white shadow-lg"
+                        : "hover:bg-Darkblue  hover:text-white"
                     }`
                   }
                   onClick={() => setToggle(false)}

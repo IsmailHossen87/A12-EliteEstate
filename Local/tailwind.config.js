@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        lightOliv: "var(--color-lightOliv)",
-        DarkOlive: "var(--color-DarkOlive)",
+        lightblue: "var(--color-lightblue)",
+        Darkblue: "var(--color-Darkblue)",
         LightTeal: "var(--color-LightTeal)",
         PrimaryBlack: "var(--color-PrimaryBlack)",
         borderColor: "var(--color-border-color)",

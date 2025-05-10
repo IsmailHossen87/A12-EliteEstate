@@ -30,35 +30,35 @@ const Requested = () => {
   return (
    <>
    <ReusableTitle  title="Property Offers" subtitle="Review and manage offers from potential buyers."/>
-    <div className="md:mx-5 overflow-x-auto">
+    <div className="md:mx-5 overflow-x-auto rounded-lg">
       <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50">
+        <thead className="bg-blue-100">
           <tr>
-            <th className="py-3.5 px-4 text-sm font-normal text-left text-gray-500">
+            <th className="py-3.5 px-4 text-sm font-normal text-left ">
               No
             </th>
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               Title
             </th>
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               Location
             </th>
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               Email
             </th>
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               Name
             </th>
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               Offer Price
             </th>
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               Status
             </th>
             <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
               Accept
             </th>
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               Reject
             </th>
           </tr>

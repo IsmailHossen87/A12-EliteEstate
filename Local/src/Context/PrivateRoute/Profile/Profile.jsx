@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import coverImg from "../../../assets/cover.jpg";
 import useAuth from "../../../Hooks/useAuth";
 import userImage from '../../../assets/user.png'
+import ReusableTitle from "../../../Components/ReusableTitle";
 
 
 const Profile = ({role}) => {
@@ -16,11 +17,12 @@ const Profile = ({role}) => {
   }
   return (
     <>
-      <div className="flex justify-center  items-center lg:min-h-screen rounded-lg py-6 bg-gray-100 px-4  lg:px-8">
+      <div className=" justify-center  items-center lg:min-h-screen rounded-lg py-6  px-4  lg:px-8">
         <Helmet>
           <title>Profile</title>
-        </Helmet>
-        <div className="bg-white shadow-lg rounded-2xl w-full max-w-xl md:max-w-4/5 lg:max-w-3/5">
+        </Helmet> 
+      <ReusableTitle  title='My Profile ' subtitle='View and manage your personal information and account details'/>
+        <div className="bg-white shadow-lg rounded-2xl w-full   ">
           <img
             alt="cover photo"
             src={coverImg}

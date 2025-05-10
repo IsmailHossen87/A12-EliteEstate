@@ -42,40 +42,44 @@ const ReviewAdmin = () => {
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 space-y-4">
         {reviews.map((review) => (
-          <div
-            key={review.id}
-            className="bg-white shadow-md rounded-lg md:p-4 p-2 flex flex-col items-center"
-          >
-            <img
-              referrerPolicy="no-referrer"
-              src={review.userImage}
-              alt={review.user}
-              className="w-16 h-16 rounded-full mb-2"
-            />
-            <h2 className="text-lg font-semibold">{review.user}</h2>
-            <p className="text-sm text-gray-600">{review.email}</p>
-            <p className="mt-2 text-center">{review.comment}</p>
-            <div className="flex items-center justify-between">
-              <div>
-                <button
+          <div className="bg-blue-100 shadow-md grid grid-cols-4  rounded-lg p-4 ">
+              {/* User Image */}
+              <div className="col-span-1">
+                <img
+                  referrerPolicy="no-referrer"
+                  src={review.userImage}
+                  alt={review.user}
+                  className="w-16 h-16 rounded-full mb-2"
+                />
+              </div>
+              <div className="flex col-span-3  flex-col">
+                <h2 className="text-lg flex  font-semibold">{review.user}</h2>
+                {/* User Email */}
+                <p className="text-sm text-gray-600">{review.email}</p>
+              </div>
+              {/* User Comment */}
+              <div className=" col-span-4 grid mt-4 grid-cols-5 justify-between">
+                <div className="col-span-3 border-2 px-4 py-1 border-gray-600 rounded-md  ">
+                  <p className="">{review.comment}</p>
+                </div> 
+                 <div className="col-span-2 text-end">
+                  <StarRatings
+                rating={review.rating} 
+                starRatedColor="blue" 
+                starEmptyColor="gray"
+                numberOfStars={5} 
+                starDimension="23px"
+                starSpacing="2px" 
+              /> 
+                 </div>
+              </div>
+              <button
                   onClick={() => handleDelete(review._id)}
                   className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
                 >
                   Delete
                 </button>
-              </div>
-              <div>
-                <StarRatings
-                  rating={review.rating}
-                  starRatedColor="blue"
-                  starEmptyColor="gray"
-                  numberOfStars={5}
-                  starDimension="20px"
-                  starSpacing="2px"
-                />
-              </div>
             </div>
-          </div>
         ))}
       </div>
     </div>

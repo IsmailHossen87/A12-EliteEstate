@@ -24,23 +24,23 @@ const MySold = () => {
     <p className="text-sm mt-2">
           <strong>Total Sold Price:</strong> ${totalSoldPrice.toFixed(2)}
         </p>
-      <div className="md:mx-5 overflow-x-auto">
+      <div className="md:mx-5 rounded-lg overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200 ">
-          <thead className="bg-gray-50">
+          <thead className="bg-blue-100">
             <tr>
-              <th className="py-3.5 px-4 text-sm font-normal text-left text-gray-500">
+              <th className="py-3.5 px-4 text-sm font-normal text-left ">
                 No
               </th>
-              <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+              <th className="px-4 py-3.5 text-sm font-normal text-left ">
                 Property Titel
               </th>
-              <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+              <th className="px-4 py-3.5 text-sm font-normal text-left ">
                 Location
               </th>
-              <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+              <th className="px-4 py-3.5 text-sm font-normal text-left ">
                 Buyer Email
               </th>
-              <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+              <th className="px-4 py-3.5 text-sm font-normal text-left ">
                 Sold Price
               </th>
             </tr>

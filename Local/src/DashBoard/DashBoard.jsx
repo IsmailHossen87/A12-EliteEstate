@@ -60,13 +60,13 @@ const DashBoard = () => {
 
   const getLinkClasses = ({ isActive }) =>
     `flex items-center gap-2 font-semibold transition py-2 px-4 rounded-md ${
-      isActive ? "bg-yellow-500 text-white shadow-md" : "bg-orange-500 hover:bg-yellow-400 hover:text-black text-white"
+      isActive ? " bg-[#0052FF] text-white shadow-md" : "bg-blue-800 hover:bg hover:text-black text-white"
     }`;
 
   return (
     <div className="md:flex flex-wrap">
       {/* Sidebar */}
-      <div className="w-full lg:w-3/12 bg-gray-900 py-4 flex flex-col lg:block lg:min-h-screen">
+      <div className="w-full lg:w-3/12 bg-lightblue py-4 flex flex-col lg:block lg:min-h-screen">
         {/* Hamburger Menu for Tablets */}
         <div className="block  lg:hidden px-4">
           <button
@@ -89,7 +89,7 @@ const DashBoard = () => {
       </div>
 
       {/* Main Content */}
-      <div className="w-full md:flex-1 p-6">
+      <div className="w-full md:flex-1 p-6 bg-[#141d51]">
         <Outlet />
       </div>
     </div>

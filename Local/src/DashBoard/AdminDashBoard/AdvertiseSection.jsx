@@ -25,27 +25,27 @@ const AdvertiseSection = () => {
     })
   }
   return (
-    <div className="overflow-x-auto w-5/6 mx-auto">
+    <div className="overflow-x-auto rounded-lg mx-auto">
     <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50 ">
+        <thead className="bg-blue-100 ">
           <tr>
-            <th className="py-3.5 px-4 text-sm font-normal text-left text-gray-500">
+            <th className="py-3.5 px-4 text-sm font-normal text-left ">
               No
             </th>
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               Item Image
             </th>
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               Title
             </th>
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               Price Range
             </th>
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               AgentName
             </th>
             {/* agent name dekhate hobee */}
-            <th className="px-4 py-3.5 text-sm font-normal text-left text-gray-500">
+            <th className="px-4 py-3.5 text-sm font-normal text-left ">
               Action
             </th>
           </tr>

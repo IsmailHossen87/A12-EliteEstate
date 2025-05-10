@@ -1,10 +1,10 @@
-import React from "react"; 
-import "../index.css"
+import React from "react";
+import "../index.css";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-lightblue text-white">
+    <footer className="bg-[#13274f] text-white">
       <div className="max-w-full mx-auto px-4 py-10 sm:px-6 lg:px-8">
         {/* Top Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:justify-items-center lg:grid-cols-3 gap-8">
@@ -12,8 +12,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">About Us</h3>
             <p className="text-gray-300">
-              Your one-stop solution for managing restaurants, exploring
-              delicious foods, and enhancing your dining experience.
+              Welcome to EliteEstate — your trusted partner in discovering
+              luxurious properties, seamless real estate solutions, and expert
+              guidance for finding your dream home or investment opportunity. We
+              bring elegance, innovation, and professionalism to every step of
+              your real estate journey.
             </p>
           </div>
 
@@ -36,7 +39,9 @@ const Footer = () => {
 
           {/* Newsletter Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Subscribe to our Newsletter</h3>
+            <h3 className="text-lg font-semibold mb-4">
+              Subscribe to our Newsletter
+            </h3>
             <form>
               <div className="flex  flex-col sm:flex-row w-3/5 md:items-center gap-2">
                 <input
@@ -61,9 +66,10 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col sm:flex-row items-center w-3/5 mx-auto justify-between gap-4">
           <div>
-          <p className="text-gray-300 text-sm text-center sm:text-left">
-            © {new Date().getFullYear()} Restaurant Management. All rights reserved.
-          </p>
+            <p className="text-gray-300 text-sm text-center sm:text-left">
+              © {new Date().getFullYear()} Restaurant Management. All rights
+              reserved.
+            </p>
           </div>
 
           <div className="flex space-x-4">

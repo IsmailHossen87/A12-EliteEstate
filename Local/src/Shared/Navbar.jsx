@@ -67,17 +67,30 @@ function Navbar() {
       })
       .catch((error) => console.error("Logout Error:", error.message));
   };
+  // for scroll
+    const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
-      className={`py-4 px-3 bg-lightblue text-white sticky top-0 z-50 shadow-md`}
+      className={`py-4 bg-lightblue text-white sticky top-0 px-4 z-50 shadow-md transition-all duration-300 ${
+        isScrolled ? "opacity-60 backdrop-blur-sm" : "opacity-100"
+      }`}
     >
-      <div className=" flex justify-between  items-center px-8">
+      <div className=" flex justify-between  items-center">
         {/* Logo */}
         <div className="flex items-center text-2xl font-bold text-white">
           <span className="text-3xl">🏠</span>
           <Link to={`/`}>
-            <span className="text-3xl font-lobster md:ml-2">Land<span className="text-green-400">S</span>phere</span>
+            <span className="text-3xl font-lobster md:ml-2"><span className="font-serif md:text-4xl">L</span>and<span className="text-green-400 font-serif md:text-4xl">S</span>phere</span>
           </Link>
         </div>
 
